@@ -1,0 +1,25 @@
+﻿<Window x:Class="AlchemyGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlchemyGame"
+        mc:Ignorable="d"
+        Title="Алхимия" Height="360" Width="640" Icon="icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#FFF5F6F7" Height="30" Orientation="Horizontal" Grid.Row="0">
+            <Button Width="130" Margin="5" Click="Button_Click">Доступные элементы</Button>
+            <Button Width="130" Margin="5" Click="Button_Click_3">Все элементы</Button>
+            <Button Width="130" Margin="5" Click="Button_Click_1">Очистить поле</Button>
+            <Button Width="130" Margin="5" Click="Button_Click_2">Новая игра</Button>
+        </StackPanel>
+        <Canvas Grid.Row="1" ClipToBounds="True" Background="#FFC9C9C9" x:Name="field"></Canvas>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" x:Name="CountElements"></TextBlock>
+        <WrapPanel Grid.Row="1" Orientation="Horizontal" Visibility="Hidden" Background="White" x:Name="allElements" ScrollViewer.VerticalScrollBarVisibility="Auto" ></WrapPanel>
+        <WrapPanel Grid.Row="1" Orientation="Horizontal" Visibility="Hidden" Background="White" x:Name="allElements2" ScrollViewer.VerticalScrollBarVisibility="Auto" ></WrapPanel>
+    </Grid>
+</Window>
